@@ -1,0 +1,43 @@
+{
+    "supportedLanguages": [
+        {
+            "code": "en",
+            "language": "English"
+        },
+        {
+            "code": "te",
+            "language": "Telugu"
+        },
+        {
+            "code": "hi",
+            "language": "Hindi"
+        }
+    ],
+    "mainHead": {
+        "name": {
+            "en": "Name",
+            "te": "పేరు",
+            "hi": "नाम"
+        },
+        "social": {
+            "en": "Social",
+            "te": "సామాజిక",
+            "hi": "सामाजिक"
+        },
+        "skills": {
+            "en": "Skills",
+            "te": "నైపుణ్యాలు",
+            "hi": "कौशल"
+        },
+        "contact": {
+            "en": "Contact",
+            "te": "సంప్రదించు",
+            "hi": "संपर्क"
+        }
+    },
+    "name": {
+        "en": "Jasti Sri Radhe Shyam",
+        "te": "జాస్తి శ్రీ రాధే శ్యామ్",
+        "hi": "जास्ति स्रि राधे श्याम"
+    }
+}
