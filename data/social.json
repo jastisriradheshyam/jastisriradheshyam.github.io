@@ -14,5 +14,13 @@
             "hi": "लिंक्डइन"
         },
         "link": "https://www.linkedin.com/in/jastisriradheshyam"
+    },
+    {
+        "name": {
+            "en": "Twitter",
+            "te": "ట్విట్టర్",
+            "hi": "ट्विटर"
+        },
+        "link": "https://twitter.com/j_sriradheshyam"
     }
 ]
