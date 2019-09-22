@@ -5,7 +5,8 @@
             "te": "గిట్హబ్",
             "hi": "गिठब"
         },
-        "link": "https://github.com/jastisriradheshyam"
+        "link": "https://github.com/jastisriradheshyam",
+        "logo": "/data/images/GitHub-Mark-120px-plus.png"
     },
     {
         "name": {
@@ -13,7 +14,8 @@
             "te": "లింక్డ్ఇన్",
             "hi": "लिंक्डइन"
         },
-        "link": "https://www.linkedin.com/in/jastisriradheshyam"
+        "link": "https://www.linkedin.com/in/jastisriradheshyam",
+        "logo": "/data/images/LI-In-Bug.png"
     },
     {
         "name": {
@@ -21,6 +23,7 @@
             "te": "ట్విట్టర్",
             "hi": "ट्विटर"
         },
-        "link": "https://twitter.com/j_sriradheshyam"
+        "link": "https://twitter.com/j_sriradheshyam",
+        "logo": "/data/images/Twitter_Logo_Blue.svg"
     }
 ]

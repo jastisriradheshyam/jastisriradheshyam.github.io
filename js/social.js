@@ -12,13 +12,29 @@ var setSocialList = function () {
     global_socialList.forEach(element => {
         let newSocialName = document.createElement("p");
         let newSocialLink = document.createElement("a");
+        
+        // ***** image [ start ] *****
+        let newSocialLogo = document.createElement("img");
+        newSocialLogo.setAttribute("src",element.logo);
+        newSocialLogo.setAttribute("class","socialLogo");
+        // ***** image [ end ] *****
+
+        // social platform name
         newSocialName.innerHTML = getInCurrentLang(element.name);
+        
+        // ***** soical link [ start ] *****        
         newSocialLink.innerHTML = element.link;
         newSocialLink.setAttribute("href", element.link);
+        // ***** soical link [ end ] *****        
+        
+        // ***** top social element [ start ] *****
         let newSocialElement = document.createElement("li");
         newSocialElement.appendChild(newSocialName);
+        newSocialElement.appendChild(newSocialLogo);
         newSocialElement.appendChild(newSocialLink);
         socialListElement.appendChild(newSocialElement);
+        // ***** top social element [ end ] *****
+
     });
 };
 
