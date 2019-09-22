@@ -3,13 +3,31 @@ import { setSiteLanguage } from './comman.js';
 import { setLangBar } from './lang.js';
 import { getSkillsList, setSkillsList } from "./skill.js";
 import { getSocialList, setSocialList } from "./social.js";
+import { removeChildElemets } from './comman.js';
 
+// ***** preloading effect setup [ start ] *****
+var circle = document.getElementById('preloading_circle');
+var radius = circle.r.baseVal.value;
+var circumference = radius * 2 * Math.PI;
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = `${circumference}`;
+
+var setProgress = function (percent) {
+    const offset = circumference - percent / 100 * circumference;
+    circle.style.strokeDashoffset = offset;
+}
+// ***** preloading effect setup [ end ] *****
 
 var preload = async function () {
     try {
+        setProgress(25);
         await getBasic();
+        setProgress(50);
         await getSkillsList();
+        setProgress(75);
         await getSocialList();
+        setProgress(100);
         return null;
     } catch (error) {
         console.log(error);
@@ -18,6 +36,11 @@ var preload = async function () {
 
 preload()
     .then(() => {
+        // ***** removing preloading elements [ start ] *****
+        let preloadingElments = document.getElementById('preloading');
+        removeChildElemets(preloadingElments);
+        preloadingElments.remove();
+        // ***** removing preloading elements [ end ] *****
         changeLanguage();
     })
     .catch();

@@ -1,5 +1,23 @@
 body {
-    background: #424743
+    background: #424743;
+    margin: 0 auto;
+}
+
+.preloading {
+    background-color: #2962FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+.progress-ring__circle {
+    /* axis compensation */
+    transition: 0.35s stroke-dashoffset;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
 }
 
 .container {
