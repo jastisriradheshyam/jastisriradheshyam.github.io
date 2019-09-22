@@ -2,15 +2,18 @@
     "supportedLanguages": [
         {
             "code": "en",
-            "language": "English"
+            "language": "English",
+            "native": "English"
         },
         {
             "code": "te",
-            "language": "Telugu"
+            "language": "Telugu",
+            "native": "తెలుగు"
         },
         {
             "code": "hi",
-            "language": "Hindi"
+            "language": "Hindi",
+            "native": "हिंदी"
         }
     ],
     "mainHead": {

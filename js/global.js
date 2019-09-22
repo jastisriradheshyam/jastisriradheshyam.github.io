@@ -6,3 +6,4 @@ var global_defaultLanguage = "en";
 var global_currentLanguage = global_defaultLanguage; //default is english
 
 var changeLanguage = {};
+var changeLanguageOnClick = {};

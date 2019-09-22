@@ -5,9 +5,13 @@ var setLangBar = function () {
     removeChildElemets(langElement);
     global_basic.supportedLanguages.forEach(element => {
         let newLangLink = document.createElement("Button");
-        newLangLink.innerHTML = ` ${element.language} `;
-        // newLangLink.setAttribute("href", `?lang=${element.code}`);
-        newLangLink.setAttribute("onclick", "changeLanguage(this)");
+        if (element.language != element.native) {
+            newLangLink.innerHTML = `${element.language}/${element.native}`;
+        } else {
+            newLangLink.innerHTML = `${element.language}`;
+        }
+
+        newLangLink.setAttribute("onclick", "changeLanguageOnClick(this)");
         newLangLink.setAttribute("langCode", element.code);
         newLangLink.setAttribute("class", "langElement");
         langElement.appendChild(newLangLink);

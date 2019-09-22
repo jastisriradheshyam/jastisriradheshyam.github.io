@@ -28,6 +28,7 @@ var getInCurrentLang = function (someVar) {
 
 var removeChildElemets = function (parentElement) {
     while (parentElement.firstChild) {
+        removeChildElemets(parentElement.firstChild);
         parentElement.removeChild(parentElement.firstChild);
     }
 };
