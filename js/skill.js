@@ -10,12 +10,16 @@ var getSkillsList = async function (callback) {
 
 var setSkillsList = function () {
     let skillsListElement = document.getElementById("skills_list");
-    removeChildElemets(skillsListElement);
+    let parentElement = skillsListElement.parentNode;
+    let newSkillsNode = skillsListElement.cloneNode(false);
+    let skillsListFragment = document.createDocumentFragment();
     global_skillsList.forEach(element => {
         let newSkillElement = document.createElement("li");
-        skillsListElement.appendChild(newSkillElement);
         newSkillElement.innerHTML = getInCurrentLang(element.name);
+        skillsListFragment.appendChild(newSkillElement);
     });
+    newSkillsNode.appendChild(skillsListFragment);
+    parentElement.replaceChild(newSkillsNode, skillsListElement);
 };
 
 export {

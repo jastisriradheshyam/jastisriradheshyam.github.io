@@ -2,7 +2,10 @@ import { removeChildElemets } from './comman.js';
 
 var setLangBar = function () {
     let langElement = document.getElementById("lang");
-    removeChildElemets(langElement);
+    let langElementParentNode = langElement.parentNode;
+    let newLangElement = langElement.cloneNode(false);
+    let langFragment = document.createDocumentFragment();
+    // removeChildElemets(langElement);
     global_basic.supportedLanguages.forEach(element => {
         let newLangLink = document.createElement("Button");
         if (element.language != element.native) {
@@ -14,8 +17,10 @@ var setLangBar = function () {
         newLangLink.setAttribute("onclick", "changeLanguageOnClick(this)");
         newLangLink.setAttribute("langCode", element.code);
         newLangLink.setAttribute("class", "langElement");
-        langElement.appendChild(newLangLink);
+        langFragment.appendChild(newLangLink);
     });
+    newLangElement.appendChild(langFragment);
+    langElementParentNode.replaceChild(newLangElement, langElement);
 };
 
 export { setLangBar };
