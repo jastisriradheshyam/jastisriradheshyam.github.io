@@ -1,5 +1,6 @@
 body {
-    background: #424743;
+    /* background: #424743; */
+    background-image: url("../data/images/art/background.jpg");
     margin: 0 auto;
 }
 
@@ -23,14 +24,14 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "header header" "name name" "skills social" "projects projects" "footer footer"
+    grid-template-areas: "header header" "name name" "skills social" "encryption encryption" "projects projects" "footer footer"
 }
 
 /* for mobile screens */
 @media (max-width: 600px) {
     .container {
         grid-template-columns: 100%;
-        grid-template-areas: "header" "name" "skills" "social" "projects" "footer"
+        grid-template-areas: "header" "name" "skills" "social" "encryption" "projects" "footer"
     }
 }
 
@@ -52,6 +53,10 @@ body {
 
 .projects {
     grid-area: projects
+}
+
+.encryption {
+    grid-area: encryption
 }
 
 .nameText {

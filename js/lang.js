@@ -1,11 +1,11 @@
-import { removeChildElemets } from './comman.js';
+import { removeChildElements } from './common.js';
 
 var setLangBar = function () {
     let langElement = document.getElementById("lang");
     let langElementParentNode = langElement.parentNode;
     let newLangElement = langElement.cloneNode(false);
     let langFragment = document.createDocumentFragment();
-    // removeChildElemets(langElement);
+    // removeChildElements(langElement);
     global_basic.supportedLanguages.forEach(element => {
         let newLangLink = document.createElement("Button");
         if (element.language != element.native) {

@@ -1,9 +1,9 @@
 /**
- * Retrives local JSON file
+ * retrieves local JSON file
  * @param {String} jsonFileName 
  * @param {Function} callback 
  */
-var retriveLocalJSON = function (jsonFileName, callback) {
+var retrieveLocalJSON = function (jsonFileName, callback) {
     let promise = new Promise((resolve, reject) => {
         let fetchOptions = {
             headers: {
@@ -32,4 +32,4 @@ var retriveLocalJSON = function (jsonFileName, callback) {
     }
 };
 
-export { retriveLocalJSON };
+export { retrieveLocalJSON };

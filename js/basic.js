@@ -1,8 +1,8 @@
-import { retriveLocalJSON } from "./retrive.js";
-import { getInCurrentLang } from "./comman.js";
+import { retrieveLocalJSON } from "./retrieve.js";
+import { getInCurrentLang } from "./common.js";
 
 var getBasic = async function (callback) {
-    global_basic = await retriveLocalJSON("basic");
+    global_basic = await retrieveLocalJSON("basic");
     return;
 };
 
@@ -16,6 +16,8 @@ var setMainHead = function() {
     skillsElement.innerHTML = getInCurrentLang(global_basic.mainHead.skills);
     let socialElement = document.getElementById("social_head");
     socialElement.innerHTML = getInCurrentLang(global_basic.mainHead.social);
+    let encryptionElement = document.getElementById("encryption_head");
+    encryptionElement.innerHTML = getInCurrentLang(global_basic.mainHead.encryption);
 }
 
 var setTitle = function() {

@@ -1,8 +1,8 @@
-import { retriveLocalJSON } from './retrive.js';
-import { getInCurrentLang, removeChildElemets } from "./comman.js";
+import { retrieveLocalJSON } from './retrieve.js';
+import { getInCurrentLang, removeChildElements } from "./common.js";
 
 var getSkillsList = async function (callback) {
-    let skills = await retriveLocalJSON("skills");
+    let skills = await retrieveLocalJSON("skills");
     global_skillTypeList = skills.type;
     global_skillsList = skills.skills;
     return;

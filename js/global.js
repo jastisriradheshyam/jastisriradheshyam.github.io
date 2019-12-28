@@ -1,3 +1,4 @@
+var global_encryption = {};
 var global_skillsList = [];
 var global_skillTypeList = [];
 var global_socialList = [];

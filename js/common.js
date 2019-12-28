@@ -26,9 +26,9 @@ var getInCurrentLang = function (someVar) {
     return someVar[global_currentLanguage] ? someVar[global_currentLanguage] : someVar[global_defaultLanguage];
 };
 
-var removeChildElemets = function (parentElement) {
+var removeChildElements = function (parentElement) {
     while (parentElement.firstChild) {
-        removeChildElemets(parentElement.firstChild);
+        removeChildElements(parentElement.firstChild);
         parentElement.removeChild(parentElement.firstChild);
     }
 };
@@ -36,5 +36,5 @@ var removeChildElemets = function (parentElement) {
 export {
     setSiteLanguage,
     getInCurrentLang,
-    removeChildElemets
+    removeChildElements
 };

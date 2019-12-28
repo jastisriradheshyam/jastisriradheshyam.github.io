@@ -1,9 +1,9 @@
 import { getBasic, setBasic, setMainHead, setTitle } from "./basic.js";
-import { setSiteLanguage } from './comman.js';
+import { setSiteLanguage, removeChildElements } from './common.js';
 import { setLangBar } from './lang.js';
 import { getSkillsList, setSkillsList } from "./skill.js";
 import { getSocialList, setSocialList } from "./social.js";
-import { removeChildElemets } from './comman.js';
+import { getEncryption, setEncryption } from "./encryption.js";
 
 // ***** preloading effect setup [ start ] *****
 var circle = document.getElementById('preloading_circle');
@@ -27,6 +27,7 @@ var preload = async function () {
         await getSkillsList();
         setProgress(75);
         await getSocialList();
+        await getEncryption();
         setProgress(100);
         return null;
     } catch (error) {
@@ -37,9 +38,9 @@ var preload = async function () {
 preload()
     .then(() => {
         // ***** removing preloading elements [ start ] *****
-        let preloadingElments = document.getElementById('preloading');
-        removeChildElemets(preloadingElments);
-        preloadingElments.remove();
+        let preloadingElements = document.getElementById('preloading');
+        removeChildElements(preloadingElements);
+        preloadingElements.remove();
         // ***** removing preloading elements [ end ] *****
         changeLanguage();
     })
@@ -69,6 +70,7 @@ changeLanguage = function (lang) {
     setBasic();
     setSocialList();
     setSkillsList();
+    setEncryption();
 };
 
 // event to monitor the location bar and change the content accordingly

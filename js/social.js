@@ -1,8 +1,8 @@
-import { retriveLocalJSON } from "./retrive.js";
-import { getInCurrentLang, removeChildElemets } from "./comman.js";
+import { retrieveLocalJSON } from "./retrieve.js";
+import { getInCurrentLang, removeChildElements } from "./common.js";
 
 var getSocialList = async function (callback) {
-    global_socialList = await retriveLocalJSON("social");
+    global_socialList = await retrieveLocalJSON("social");
     return;
 };
 
