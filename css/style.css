@@ -1,6 +1,9 @@
 body {
-    /* background: #424743; */
-    background-image: url("../data/images/art/background.jpg");
+    background:
+    linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:#708090;
+    background-size: 64px 128px;
     margin: 0 auto;
 }
 
@@ -39,8 +42,22 @@ body {
     grid-area: header
 }
 
+.langElement {
+    height: 100%;
+    border-radius: 2vw;
+    border: 5px solid aqua;
+    background:wheat;
+    cursor: pointer;
+    color: teal;
+}
+
 .name {
-    grid-area: name
+    grid-area: name;
+    border-width: 0.2rem;
+    border-color: navy;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    background-color: gainsboro;
 }
 
 .skills {
@@ -61,9 +78,10 @@ body {
 
 .nameText {
     text-align: center;
-    text-decoration: underline;
-    color: blueviolet;
+    color: saddlebrown;
     font-size: 200%;
+    line-height: 1.5;
+    text-shadow: 4px 4px 5px hotpink;
 }
 
 .lang {

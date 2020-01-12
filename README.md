@@ -9,4 +9,4 @@ My GitHub Pages
 # Credits
 - Preloading effect: [Building a Progress Ring, Quickly | CSS-Tricks](https://css-tricks.com/building-progress-ring-quickly/)
 
-- Background: (Under Public Domain) [Floral Pattern - ReusableArt.com](http://www.reusableart.com/patterns-03.html)
+- Background: [Jeroen Franse (@jroenf) / Twitter](https://twitter.com/jroenf), [weave](https://leaverou.github.io/css3patterns/#weave)
