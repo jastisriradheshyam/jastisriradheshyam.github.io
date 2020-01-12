@@ -1,39 +1,28 @@
 import { retrieveLocalJSON } from './retrieve.js';
 import { getInCurrentLang } from "./common.js";
-
-var publicKey = null;
+var worker = new Worker('./js/enc_worker.js');
 
 let encryptionButton = document.getElementById('encrypt_button');
 encryptionButton.addEventListener("click", async () => {
     let message = document.getElementById("plainText").value;
-    await getPublicKey();
-    const options = {
-        message: openpgp.message.fromText(message),       // input as Message object
-        publicKeys: (await openpgp.key.readArmored(publicKey)).keys // for encryption
-        // privateKeys: [privKeyObj]                                 // for signing (optional)
-    }
-
-    openpgp.encrypt(options).then(cipherText => {
-        return cipherText.data // '-----BEGIN PGP MESSAGE ... END PGP MESSAGE-----'
-    }).then((encryptedText) => {
-        document.getElementById('encrypted_data').innerHTML = encryptedText
-    })
+    worker.postMessage(message);
+    worker.addEventListener('message', function (e) {
+        document.getElementById('encrypted_data').innerHTML = e.data
+    });
 });
 
-var getPublicKey = async function () {
-    if (publicKey == null) {
-        let response = await fetch('./data/pgp/key.pub');
-        publicKey = await response.text();
-    }
-    return publicKey;
-};
-
+/**
+ * get the encryption visual data
+ */
 var getEncryption = async function () {
     let encryption = await retrieveLocalJSON("encryption");
     global_encryption = encryption;
     return;
 };
 
+/**
+ * get the encryption visual data
+ */
 var setEncryption = function () {
     document.getElementById("encrypt_button").innerHTML = getInCurrentLang(global_encryption.encrypt);
 };
