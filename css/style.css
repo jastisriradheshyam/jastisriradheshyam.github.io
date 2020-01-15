@@ -5,6 +5,7 @@ body {
     background-color:#708090;
     background-size: 64px 128px;
     margin: 0 auto;
+    line-height: 1.5;
 }
 
 .preloading {
@@ -45,19 +46,16 @@ body {
 .langElement {
     height: 100%;
     border-radius: 2vw;
-    border: 5px solid aqua;
+    border: 5px solid #2a7878;
     background:wheat;
     cursor: pointer;
     color: teal;
+    box-shadow: -1em 0em 2em black;
 }
 
 .name {
+    text-align: center;
     grid-area: name;
-    border-width: 0.2rem;
-    border-color: navy;
-    border-top-style: dashed;
-    border-bottom-style: dashed;
-    background-color: gainsboro;
 }
 
 .skills {
@@ -77,11 +75,20 @@ body {
 }
 
 .nameText {
-    text-align: center;
+    background-color: #dcdcdcc2;
+    padding: 0em 1em 0.2em 1em;
     color: saddlebrown;
+    border-radius: 1em 1em 1em 1em;
     font-size: 200%;
-    line-height: 1.5;
+    line-height: 2;
     text-shadow: 4px 4px 5px hotpink;
+}
+
+.listText {
+    background-color: #b5a4d0;;
+    color: black;
+    border-radius: 0em 0em 2em 0em;
+    padding: 0em 1em 0em 1em;
 }
 
 .lang {

@@ -15,7 +15,10 @@ var setSkillsList = function () {
     let skillsListFragment = document.createDocumentFragment();
     global_skillsList.forEach(element => {
         let newSkillElement = document.createElement("li");
-        newSkillElement.innerHTML = getInCurrentLang(element.name);
+        let span = document.createElement("span");
+        span.innerHTML = getInCurrentLang(element.name);
+        span.classList.add("listText")
+        newSkillElement.appendChild(span);
         skillsListFragment.appendChild(newSkillElement);
     });
     newSkillsNode.appendChild(skillsListFragment);
