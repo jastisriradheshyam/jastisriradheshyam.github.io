@@ -5,7 +5,7 @@ body {
     background-color:#708090;
     background-size: 64px 128px;
     margin: 0 auto;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .preloading {
@@ -32,6 +32,7 @@ body {
 }
 
 /* for mobile screens */
+
 @media (max-width: 600px) {
     .container {
         grid-template-columns: 100%;
@@ -47,7 +48,7 @@ body {
     height: 100%;
     border-radius: 2vw;
     border: 5px solid #2a7878;
-    background:wheat;
+    background: wheat;
     cursor: pointer;
     color: teal;
     box-shadow: -1em 0em 2em black;
@@ -79,15 +80,15 @@ body {
     padding: 0em 1em 0.2em 1em;
     color: saddlebrown;
     border-radius: 1em 1em 1em 1em;
-    font-size: 200%;
+    font-size: 3ch;
     line-height: 2;
     text-shadow: 4px 4px 5px hotpink;
 }
 
 .listText {
-    background-color: #b5a4d0;;
+    background-color: #b5a4d0;
     color: black;
-    border-radius: 0em 0em 2em 0em;
+    border-radius: 1em 1em 1em 1em;
     padding: 0em 1em 0em 1em;
 }
 
@@ -97,4 +98,29 @@ body {
 
 .socialLogo {
     height: 2em;
+}
+
+.heading {
+    text-align: center;
+}
+
+.listingCommon {
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0%;
+}
+
+.socialSpan {
+    display: inline-block;
+    background: wheat;
+    padding: 0.1em 1em 0em 1em;
+    border-radius: 1em 1em 1em 1em;
+    margin: 0.1em;
+}
+
+.socialSpan a:link,
+.socialSpan a:visited,
+.socialSpan a:hover,
+.socialSpan a:active {
+    color: #2962FF ;
 }

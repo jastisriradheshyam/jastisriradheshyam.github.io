@@ -14,7 +14,9 @@ var setSocialList = function () {
     let socialListFragment = document.createDocumentFragment();
 
     global_socialList.forEach(element => {
-        let newSocialName = document.createElement("p");
+        let newSocialElementSpan = document.createElement("span");
+        newSocialElementSpan.classList.add('socialSpan')
+        let newSocialName = document.createElement("span");
         let newSocialLink = document.createElement("a");
 
         // ***** image [ start ] *****
@@ -26,16 +28,17 @@ var setSocialList = function () {
         // social platform name
         newSocialName.innerHTML = getInCurrentLang(element.name);
 
-        // ***** soical link [ start ] *****        
-        newSocialLink.innerHTML = element.link;
+        // ***** social link [ start ] *****
+        // newSocialLink.innerHTML = element.link;
         newSocialLink.setAttribute("href", element.link);
-        // ***** soical link [ end ] *****        
+        // ***** social link [ end ] *****
 
         // ***** top social element [ start ] *****
         let newSocialElement = document.createElement("li");
-        newSocialElement.appendChild(newSocialName);
-        newSocialElement.appendChild(newSocialLogo);
-        newSocialElement.appendChild(newSocialLink);
+        newSocialLink.appendChild(newSocialLogo);
+        newSocialLink.appendChild(newSocialName);
+        newSocialElementSpan.appendChild(newSocialLink)
+        newSocialElement.appendChild(newSocialElementSpan);
         socialListFragment.appendChild(newSocialElement);
         // ***** top social element [ end ] *****
     });
