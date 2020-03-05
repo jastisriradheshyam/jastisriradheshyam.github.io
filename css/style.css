@@ -132,6 +132,7 @@ body {
 }
 
 .encryptedText {
+    overflow-x: auto;
     background: #222;
     color: #09c602;
     text-align: left;
