@@ -1,8 +1,5 @@
 body {
-    background:
-    linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
-    linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
-    background-color:#708090;
+    background-color:#617070;
     background-size: 64px 128px;
     margin: 0 auto;
     line-height: 1.6;
@@ -46,7 +43,7 @@ body {
 
 .langElement {
     height: 100%;
-    border-radius: 2vw;
+    border-radius: 2em;
     border: 5px solid #2a7878;
     background: wheat;
     cursor: pointer;
@@ -76,17 +73,17 @@ body {
 }
 
 .nameText {
-    background-color: #dcdcdcc2;
+    background-color: whitesmoke;
     padding: 0em 1em 0.2em 1em;
-    color: saddlebrown;
+    color: cornflowerblue;
     border-radius: 1em 1em 1em 1em;
     font-size: 3ch;
     line-height: 2;
-    text-shadow: 4px 4px 5px hotpink;
+    text-shadow: 4px 4px 5px turquoise;
 }
 
 .listText {
-    background-color: #b5a4d0;
+    background-color: whitesmoke;
     color: black;
     border-radius: 1em 1em 1em 1em;
     padding: 0em 1em 0em 1em;
@@ -102,6 +99,7 @@ body {
 
 .heading {
     text-align: center;
+    color: lightcyan;
 }
 
 .listingCommon {
@@ -112,7 +110,7 @@ body {
 
 .socialSpan {
     display: inline-block;
-    background: wheat;
+    background: whitesmoke;
     padding: 0.1em 1em 0em 1em;
     border-radius: 1em 1em 1em 1em;
     margin: 0.1em;
