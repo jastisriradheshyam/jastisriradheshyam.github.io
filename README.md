@@ -10,3 +10,5 @@ My GitHub Pages
 - Preloading effect: [Building a Progress Ring, Quickly | CSS-Tricks](https://css-tricks.com/building-progress-ring-quickly/)
 
 - Background: [Jeroen Franse (@jroenf) / Twitter](https://twitter.com/jroenf), [weave](https://leaverou.github.io/css3patterns/#weave)
+
+- Favicon Created with: [favicon.ico Generator](https://www.favicon.cc/)
