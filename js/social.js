@@ -27,10 +27,12 @@ var setSocialList = function () {
 
         // social platform name
         newSocialName.innerHTML = getInCurrentLang(element.name);
+        newSocialName.classList.add('socialTitle');
 
         // ***** social link [ start ] *****
         // newSocialLink.innerHTML = element.link;
         newSocialLink.setAttribute("href", element.link);
+        newSocialLink.classList.add('socialLink');
         // ***** social link [ end ] *****
 
         // ***** top social element [ start ] *****

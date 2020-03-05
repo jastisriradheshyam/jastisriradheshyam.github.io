@@ -97,6 +97,14 @@ body {
     height: 2em;
 }
 
+.socialTitle {
+    vertical-align: 0.5em;
+}
+
+.socialLink {
+    text-decoration: none;
+}
+
 .heading {
     text-align: center;
     color: lightcyan;
@@ -111,7 +119,7 @@ body {
 .socialSpan {
     display: inline-block;
     background: whitesmoke;
-    padding: 0.1em 1em 0em 1em;
+    padding: 0.4em 1em 0em 1em;
     border-radius: 1em 1em 1em 1em;
     margin: 0.1em;
 }
