@@ -1,12 +1,12 @@
 body {
-    background-color: #617070;
+    background-color: #212D4D;
     background-size: 64px 128px;
     margin: 0 auto;
     line-height: 1.6;
 }
 
 .preloading {
-    background-color: #2962FF;
+    background-color: #212D4D;
     display: flex;
     align-items: center;
     justify-content: center;
