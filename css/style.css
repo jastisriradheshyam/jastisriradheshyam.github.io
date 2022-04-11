@@ -82,7 +82,7 @@ body {
 .nameText {
     padding: 0em 1em 0.2em 1em;
     color: cornflowerblue;
-    font-size: 3ch;
+    font-size: 2em;
     line-height: 2;
     text-shadow: 4px 4px 5px turquoise;
 }
