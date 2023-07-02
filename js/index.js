@@ -6,20 +6,20 @@ import { getSocialList, setSocialList } from "./social.js";
 import { getEncryption, setEncryption } from "./encryption.js";
 
 // ***** preloading effect setup [ start ] *****
-var circle = document.getElementById('preloading_circle');
-var radius = circle.r.baseVal.value;
-var circumference = radius * 2 * Math.PI;
+const circle = document.getElementById('preloading_circle');
+const radius = circle.r.baseVal.value;
+const circumference = radius * 2 * Math.PI;
 
 circle.style.strokeDasharray = `${circumference} ${circumference}`;
 circle.style.strokeDashoffset = `${circumference}`;
 
-var setProgress = function (percent) {
+const setProgress = function (percent) {
     const offset = circumference - percent / 100 * circumference;
     circle.style.strokeDashoffset = offset;
 }
 // ***** preloading effect setup [ end ] *****
 
-var preload = async function () {
+const preload = async function () {
     try {
         let totalProgress = 0;
         const updateProgress = (progressInc) => {
@@ -47,7 +47,7 @@ var preload = async function () {
 preload()
     .then(() => {
         // ***** removing preloading elements [ start ] *****
-        let preloadingElements = document.getElementById('preloading');
+        const preloadingElements = document.getElementById('preloading');
         removeChildElements(preloadingElements);
         preloadingElements.remove();
         // ***** removing preloading elements [ end ] *****
@@ -60,7 +60,7 @@ preload()
  * @param {Window Element Object} langObj 
  */
 changeLanguageOnClick = function (langObj) {
-    let lang = langObj.getAttribute("langCode");
+    const lang = langObj.getAttribute("langCode");
     if (global_currentLanguage === lang) {
         return
     }

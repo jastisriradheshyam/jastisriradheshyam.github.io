@@ -1,6 +1,6 @@
 import { retrieveLocalJSON } from './retrieve.js';
 import { getInCurrentLang } from "./common.js";
-var worker = new Worker('./js/enc_worker.js');
+const worker = new Worker('./js/enc_worker.js');
 
 const encryptionButton = document.getElementById('encrypt_button');
 const encryptedData = document.getElementById('encrypted_data');
@@ -20,7 +20,7 @@ encryptedDataCopyButton.addEventListener("click", ()=> {
 /**
  * get the encryption visual data
  */
-var getEncryption = async function () {
+const getEncryption = async function () {
     const encryption = await retrieveLocalJSON("encryption");
     global_encryption = encryption;
     return;
@@ -29,7 +29,7 @@ var getEncryption = async function () {
 /**
  * get the encryption visual data
  */
-var setEncryption = function () {
+const setEncryption = function () {
     document.getElementById("encrypt_button").innerHTML = getInCurrentLang(global_encryption.encrypt);
     encryptedDataCopyButton.innerHTML = getInCurrentLang(global_encryption.encryptDataCopyButton);
 };

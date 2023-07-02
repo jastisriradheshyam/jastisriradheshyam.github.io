@@ -3,9 +3,9 @@
  * @param {String} jsonFileName 
  * @param {Function} callback 
  */
-var retrieveLocalJSON = function (jsonFileName, callback) {
-    let promise = new Promise((resolve, reject) => {
-        let fetchOptions = {
+const retrieveLocalJSON = function (jsonFileName, callback) {
+    const promise = new Promise((resolve, reject) => {
+        const fetchOptions = {
             headers: {
                 "content-type": "application/json; charset=UTF-8",
                 "pragma": "no-cache",

@@ -1,26 +1,26 @@
 import { retrieveLocalJSON } from "./retrieve.js";
-import { getInCurrentLang, removeChildElements } from "./common.js";
+import { getInCurrentLang } from "./common.js";
 
-var getSocialList = async function (callback) {
+const getSocialList = async function (callback) {
     global_socialList = await retrieveLocalJSON("social");
     return;
 };
 
-var setSocialList = function () {
-    let socialListElement = document.getElementById("social_list");
-    let socialListParentNode = socialListElement.parentNode;
+const setSocialList = function () {
+    const socialListElement = document.getElementById("social_list");
+    const socialListParentNode = socialListElement.parentNode;
 
-    let newSocialListElement = socialListElement.cloneNode(false);
-    let socialListFragment = document.createDocumentFragment();
+    const newSocialListElement = socialListElement.cloneNode(false);
+    const socialListFragment = document.createDocumentFragment();
 
     global_socialList.forEach(element => {
-        let newSocialElementSpan = document.createElement("span");
+        const newSocialElementSpan = document.createElement("span");
         newSocialElementSpan.classList.add('socialSpan')
-        let newSocialName = document.createElement("span");
-        let newSocialLink = document.createElement("a");
+        const newSocialName = document.createElement("span");
+        const newSocialLink = document.createElement("a");
 
         // ***** image [ start ] *****
-        let newSocialLogo = document.createElement("img");
+        const newSocialLogo = document.createElement("img");
         newSocialLogo.setAttribute("src", element.logo);
         newSocialLogo.setAttribute("class", "socialLogo");
         // ***** image [ end ] *****
@@ -36,7 +36,7 @@ var setSocialList = function () {
         // ***** social link [ end ] *****
 
         // ***** top social element [ start ] *****
-        let newSocialElement = document.createElement("li");
+        const newSocialElement = document.createElement("li");
         newSocialLink.appendChild(newSocialLogo);
         newSocialLink.appendChild(newSocialName);
         newSocialElementSpan.appendChild(newSocialLink)
