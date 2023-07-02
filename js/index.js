@@ -21,13 +21,22 @@ var setProgress = function (percent) {
 
 var preload = async function () {
     try {
-        setProgress(25);
+        let totalProgress = 0;
+        const updateProgress = (progressInc) => {
+            totalProgress = totalProgress + progressInc;
+            setProgress(totalProgress);
+        }
+        updateProgress(25);
         await getBasic();
-        setProgress(50);
-        await getSkillsList();
-        setProgress(75);
-        await getSocialList();
-        await getEncryption();
+        updateProgress(25);
+        const skillsPromise = getSkillsList().then(() => {
+            updateProgress(25);
+        });
+        await Promise.allSettled([
+            skillsPromise,
+            getSocialList(),
+            getEncryption()
+        ])
         setProgress(100);
         return null;
     } catch (error) {
