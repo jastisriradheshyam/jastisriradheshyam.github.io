@@ -113,6 +113,7 @@ body {
 .heading {
     text-align: center;
     color: lightcyan;
+    text-decoration: underline double yellow 0.01em;
 }
 
 .listingCommon {
@@ -144,4 +145,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; */
+}
+
+#encrypt_button, #encrypted_data_copy_button {
+    font-weight: bold;
 }
