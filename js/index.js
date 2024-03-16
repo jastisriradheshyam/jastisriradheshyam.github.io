@@ -26,18 +26,21 @@ const preload = async function () {
             totalProgress = totalProgress + progressInc;
             setProgress(totalProgress);
         }
-        updateProgress(25);
+        updateProgress(20);
         await getBasic();
-        updateProgress(25);
-        const skillsPromise = getSkillsList().then(() => {
-            updateProgress(25);
-        });
+        updateProgress(20);
         await Promise.allSettled([
-            skillsPromise,
-            getSocialList(),
-            getEncryption()
+            getSkillsList().then(() => {
+                updateProgress(20);
+            }),
+            getSocialList().then(() => {
+                updateProgress(20);
+            }),
+            getEncryption().then(() => {
+                updateProgress(20);
+            })
         ])
-        setProgress(100);
+        // setProgress(100);
         return null;
     } catch (error) {
         console.log(error);
