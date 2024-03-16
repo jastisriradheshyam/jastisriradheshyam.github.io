@@ -1,6 +1,7 @@
 var global_encryption = {};
 var global_skillsList = [];
 var global_skillTypeList = [];
+var global_relevanceList = [];
 var global_socialList = [];
 var global_basic = {};
 var global_defaultLanguage = "en";
