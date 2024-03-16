@@ -9,7 +9,7 @@ const setLangBar = function () {
     global_basic.supportedLanguages.forEach(element => {
         const newLangLink = document.createElement("Button");
         if (element.language != element.native) {
-            newLangLink.innerHTML = `${element.language}/${element.native}`;
+            newLangLink.innerHTML = `${element.native}/${element.language}`;
         } else {
             newLangLink.innerHTML = `${element.language}`;
         }
