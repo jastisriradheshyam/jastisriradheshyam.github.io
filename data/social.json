@@ -2,8 +2,8 @@
     {
         "name": {
             "en": "GitHub",
-            "te": "గిట్హబ్",
-            "hi": "गिठब"
+            "te": "గిట్‌హబ్",
+            "hi": "गिटहब"
         },
         "link": "https://github.com/jastisriradheshyam",
         "logo": "/data/images/GitHub-Mark-120px-plus.png"
@@ -19,11 +19,20 @@
     },
     {
         "name": {
-            "en": "Twitter",
-            "te": "ట్విట్టర్",
-            "hi": "ट्विटर"
+            "en": "Twitter / X",
+            "te": "ట్విట్టర్ / ఎక్స్",
+            "hi": "ट्विटर / एक्स"
         },
         "link": "https://twitter.com/j_sriradheshyam",
         "logo": "/data/images/Twitter_Logo_Blue.svg"
+    },
+    {
+        "name": {
+            "en": "Gitlab",
+            "te": "గిట్‌లేబ్",
+            "hi": "गिटलैब"
+        },
+        "link": "https://gitlab.com/j_sriradheshyam",
+        "logo": "/data/images/GitHub-Mark-120px-plus.png"
     }
 ]
