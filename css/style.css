@@ -1,12 +1,12 @@
 body {
-    background-color: #212D4D;
+    background-color: #B0B8B4;
     background-size: 64px 128px;
     margin: 0 auto;
     line-height: 1.6;
 }
 
 .preloading {
-    background-color: #212D4D;
+    background-color: #B0B8B4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,21 +75,21 @@ body {
 .name {
     display: table;
     margin: 0px auto 0px auto;
-    background-color: whitesmoke;
+    background-color: #E7EBE0;
     border-radius: 2em 2em 2em 2em;
 }
 
 .nameText {
     padding: 0em 1em 0.2em 1em;
-    color: cornflowerblue;
+    color: #1C1C1B;
     font-size: 2em;
     line-height: 2;
-    text-shadow: 4px 4px 5px turquoise;
+    text-shadow: 4px 4px 5px #9f9f9f;
 }
 
 .listText {
-    background-color: whitesmoke;
-    color: black;
+    background-color: #E7EBE0;
+    color: #565752;
     border-radius: 1em 1em 1em 1em;
     padding: 0em 1em 0em 1em;
 }
@@ -112,7 +112,7 @@ body {
 
 .heading {
     text-align: center;
-    color: lightcyan;
+    color: #1C1C1B;
     text-decoration: underline double yellow 0.01em;
 }
 
@@ -134,7 +134,7 @@ body {
 .socialSpan a:visited,
 .socialSpan a:hover,
 .socialSpan a:active {
-    color: #2962FF;
+    color: #422057FF;
 }
 
 .encryptedText {
