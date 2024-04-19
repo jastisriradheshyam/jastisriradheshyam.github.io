@@ -113,7 +113,7 @@ body {
 .heading {
     text-align: center;
     color: #1C1C1B;
-    text-decoration: underline double yellow 0.01em;
+    text-decoration: underline dotted #28334A 0.05em;
 }
 
 .listingCommon {
